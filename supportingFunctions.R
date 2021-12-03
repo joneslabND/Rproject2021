@@ -20,7 +20,7 @@ txt2csv <- function(dir){
 
 
 
-##set a function to combine all data into a new table and add two columns of country_name and monitoring date of each patient and its corresponding content into this new generate table
+##set a function to add two columns of country_name and monitoring date of each patient into original file
 all2one <-  function(dir,country_name,warningNA=TRUE,removeNA=TRUE){
   #set start file number to be 0
   i=0
@@ -34,11 +34,11 @@ all2one <-  function(dir,country_name,warningNA=TRUE,removeNA=TRUE){
     ##if the file contained NA, give a warning, remove the NA and use other number for calculating
     if (is.na(data)){
       #input TRUE to give a warning 
-      if (warningNA=TRUE){
+      if (warningNA==TRUE){
         warning("file contains NA")
       }
       #input TRUE to remove the row which contains NA
-      if (removeNA=TRUE){
+      if (removeNA==TRUE){
         data <- na.omit(data)
       }
     }
@@ -87,6 +87,7 @@ combine2csv <- function(file1,file2,fileout){
 }
 ##running the function combined2csv to get the final table
 #combine2csv('countryX.csv','countryY.csv','alldata.csv')
+
 
 
 
@@ -293,7 +294,7 @@ gender_day_figure <- function(){
     grid.arrange(plot_percent_of_female_patients_x,plot_percent_of_female_patients_y, plot_percent_of_female_patients,
                  pie_x,pie_y,pie_2,ncol=3)
   }
-gender_day_figure()
+#gender_day_figure()
 
   
 
@@ -422,8 +423,7 @@ age_figure <- function(){
                  pie_x,pie_y,pie_2,
                  ncol=3,nrow=3)
 }
-
-#age_figure()
+age_figure()
   
   
   
@@ -465,7 +465,7 @@ marker_figure <- function(){
     library(RColorBrewer)
     
     my.cols <-  brewer.pal(10,"Set3")
-    my.cols
+
     plot_marker_X <- ggplot(data = table4,aes(x=marker,y=countryX)) +
       geom_bar(stat='identity',fill=my.cols) +
       xlab("Marker") +
