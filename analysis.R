@@ -28,10 +28,10 @@ txt2csv('countryY')
 ##the function all2one()function could upload and combine all data of Y and X country into a new table and add two columns of 
 ##country_name and monitoring date of each people and its corresponding content into new generate countryX.csv and countryY.csv
 ##this function also convenient for users by changing the parameter of warningNA and removeNA to choose give warning and remove 
-##NA files or not is there is any NA present in the table
+##NA files or not if there is any NA present in the table
 all2one('countryY','Y')
 all2one('countryX','X')
-##the function combine2csv() could combile all X and Y country data into a new table, and save as alldata.csv
+##the function combine2csv() could combine all X and Y country data into a new table, and save as alldata.csv
 combine2csv('countryX.csv','countryY.csv','alldata.csv')
 
  
@@ -57,5 +57,7 @@ age_figure()
 
 
 ##the function marker_figure() could get the number of patients labeled with every marker of the ten disease related marker in X and Y country
-#we could see 
+#we could see X and Y country has different distribution of markers, the patients in Y country mostly present with last five markers, marker 
+#first five markers are less present. While the patients in X country mostly present with first five markers, marker 6 to 10 are very less
+#present, almost near zero.
 marker_figure()
