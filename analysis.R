@@ -37,7 +37,7 @@ combine2csv('countryX.csv','countryY.csv','alldata.csv')
  
 ##the function patient_day_figure() could get daily patient number and percent in X country, Y country, both two countries and present the 
 ##result in three line graphs, these line graph use blue line shows the result of X country, and the red line shows the result of Y country
-#we could see X country fiest outbreak the disease and patient number during all monitoring period are still higher than Y country
+#we could see X country first outbreak the disease and patient number during all monitoring period are still higher than Y country
 patient_day_figure()
 
 
@@ -48,15 +48,16 @@ patient_day_figure()
 gender_day_figure()
 
 
-##the function age_figure() could get 1)the number of of all age patients and present every age distribution to the disease in X country, Y country,
-##both the two countries in line chart； 2）the number of every ten years age patients and present the age period distribution to the disease in 
-##X country,Y country, the two countries in line and chart gragh
-#wen could see that 0-9 years old take place the 1st position in all years part, 10-19 years old the 2rd, 20-29 years old the third, takes almost 90%
-#of all patients,and the older the number of patients is less.So the age may contribute to the disease, younger are more easy to get the disease.
+##the function age_figure() could get 1)the number of of all age patients and present every age distribution to the disease in country X, 
+##country Y, both the two countries in line chart; 2）the number of every ten years age patients and present the age period distribution 
+##to the disease in country X, country Y, the two countries in line and chart graph
+#wen could see that 0-9 years old take place the 1st position in all years parts, 10-19 years old the 2rd, 20-29 years old the third, people
+#age below 30 years old take up almost 90% of all patients,and the age is older the number of patients is less.So the age may contribute 
+#to the disease, and younger person are more easy to get the disease.
 age_figure()
 
 
-##the function marker_figure() could get the number of patients labeled with every marker of the ten disease related marker in X and Y country
+##the function marker_figure() could get the number of patients labeled with every marker of the ten disease related markers in X and Y country
 #we could see X and Y country has different distribution of markers, the patients in Y country mostly present with last five markers, marker 
 #first five markers are less present. While the patients in X country mostly present with first five markers, marker 6 to 10 are very less
 #present, almost near zero.
